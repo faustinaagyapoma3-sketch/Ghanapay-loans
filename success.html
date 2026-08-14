@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - GhanaPay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo-container">
+                <img src="logo.png" alt="GhanaPay" class="header-logo-img">
+                <div class="header-logo-text">
+                    <span class="header-logo-name">GhanaPay</span>
+                    <span class="header-logo-motto">Your Money, Your Way.</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 100%;"></div>
+        </div>
+
+        <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1;">
+            <div style="width: 100px; height: 100px; background: var(--gray-50); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; box-shadow: var(--shadow-lg);">
+                <i class="fa-solid fa-check" style="font-size: 48px; color: var(--success);"></i>
+            </div>
+            
+            <h1 class="page-title" data-t="success_title">Application Completed!</h1>
+            <p class="page-subtitle" data-t="success_msg" style="max-width: 300px; margin-bottom: 40px;">Your loan request has been successfully sent and is being processed.</p>
+
+            <button class="btn-elite btn-primary" onclick="localStorage.clear(); window.location.href='index.html'" style="max-width: 200px;">
+                <span>OK</span>
+            </button>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

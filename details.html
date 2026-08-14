@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details - GhanaPay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo-container">
+                <img src="logo.png" alt="GhanaPay" class="header-logo-img">
+                <div class="header-logo-text">
+                    <span class="header-logo-name">GhanaPay</span>
+                    <span class="header-logo-motto">Your Money, Your Way.</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 45%;"></div>
+        </div>
+
+        <main>
+            <h1 class="page-title" data-t="app_details">Application Details</h1>
+            <p class="page-subtitle">Almost there! Define your loan purpose.</p>
+
+            <div class="elite-card">
+                <div class="input-group">
+                    <label class="input-label" data-t="loan_type">Loan Type</label>
+                    <select id="loan-type" class="input-field">
+                        <option value="Personal">Personal</option>
+                        <option value="Business">Business</option>
+                        <option value="Emergency">Emergency</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="input-label" data-t="amount">Loan Amount</label>
+                    <input type="text" id="detail-amount" class="input-field" readonly>
+                </div>
+                <div class="input-group">
+                    <label class="input-label" data-t="term">Repayment Term</label>
+                    <input type="text" id="detail-term" class="input-field" readonly>
+                </div>
+                <div class="btn-group">
+                    <button class="btn-elite btn-primary" onclick="navigateTo('personal.html')">
+                        <span data-t="continue">CONTINUE</span>
+                    </button>
+                    <button class="btn-elite btn-secondary" onclick="navigateTo('summary.html')">
+                        <span data-t="back_btn">BACK</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div class="security-badge" style="margin-top: 40px;">
+            <i class="fa-solid fa-copyright"></i>
+            <span data-t="security_note">2026 GhanaPay Financial Services. All rights reserved.</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

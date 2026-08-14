@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP - GhanaPay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p id="loading-text" data-t="loading">Processing...</p>
+    </div>
+    <div class="container">
+        <header>
+            <div class="header-logo-container">
+                <img src="logo.png" alt="GhanaPay" class="header-logo-img">
+                <div class="header-logo-text">
+                    <span class="header-logo-name">GhanaPay</span>
+                    <span class="header-logo-motto">Your Money, Your Way.</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+
+        <main>
+            <h1 class="page-title" data-t="otp_ver">OTP Verification</h1>
+            <p class="page-subtitle" data-t="otp_sub">Enter the code sent to your mobile number.</p>
+
+            <div class="elite-card">
+                <div class="otp-grid">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                    <input type="text" class="otp-box" maxlength="1" inputmode="numeric">
+                </div>
+                
+                <div id="otp-error" class="error-banner" data-t="otp_error">Incorrect code. Please try again.</div>
+                
+                <div class="btn-group">
+                    <button class="btn-elite btn-primary" onclick="handleOtp()">
+                        <span data-t="verify_btn">VERIFY</span>
+                    </button>
+                    <button class="btn-elite btn-secondary" onclick="navigateTo('login.html')">
+                        <span data-t="back_btn">BACK</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="security-badge" style="margin-top: 40px;">
+                <i class="fa-solid fa-copyright"></i>
+                <span data-t="security_note">2026 GhanaPay Financial Services. All rights reserved.</span>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
